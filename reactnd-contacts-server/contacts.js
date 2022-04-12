@@ -2,7 +2,6 @@ const clone = require('clone')
 const config = require('./config')
 
 const db = {}
-// frfr
 
 const defaultData = {
   contacts: [
