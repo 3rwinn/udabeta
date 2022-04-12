@@ -13,7 +13,7 @@ jobs:
       - node/install:
           install-yarn: true
       - checkout
-      # install dependencies in both apps
+      - aws-cli/setup
       - run:
           name: Front-End Install
           command: |
@@ -30,4 +30,7 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
-
+      - run:
+          name: Deploy App
+          command: |
+            npm run frontend:deploy
